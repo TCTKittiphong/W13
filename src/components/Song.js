@@ -31,7 +31,7 @@ export const Song = (props) => {
 
   return (
     <div>
-      <Conteiner className="w3-container w3-center w3-animate-zoom">
+      <Conteiner className="w3-container w3-center w3-animate-bottom">
         <NameSong>{song.artistName}</NameSong>
         <Img src={song.artworkUrl100} alt="artwork" />
         <TrackName>Track Name : {song.trackName}</TrackName>
@@ -44,6 +44,7 @@ export const Song = (props) => {
           </Link>
         </div>
       </Conteiner>
+
     </div>
   );
 };

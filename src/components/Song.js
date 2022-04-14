@@ -31,7 +31,7 @@ export const Song = (props) => {
 
   return (
     <div>
-      <Conteiner>
+      <Conteiner className="w3-container w3-center w3-animate-zoom">
         <NameSong>{song.artistName}</NameSong>
         <Img src={song.artworkUrl100} alt="artwork" />
         <TrackName>Track Name : {song.trackName}</TrackName>

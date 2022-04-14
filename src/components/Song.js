@@ -1,23 +1,49 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 export const Song = (props) => {
+  const song = props.song;
 
-    const song = props.song;
+  const Conteiner = styled.div`
+    display: flex;
+    padding: 20px;
+  `;
 
+  const NameSong = styled.h4`
+    display: flex;
+    flex: 1;
+  `;
 
+  const Img = styled.img`
+    margin-right: 20px;
+    width: 10%;
+    height: 10%;
+  `;
+
+  const TrackName = styled.div`
+    flex: 1;
+  `;
+
+  const Price = styled.div`
+    flex: 1;
+  `;
 
   return (
     <div>
+      <Conteiner>
+        <NameSong>{song.artistName}</NameSong>
+        <Img src={song.artworkUrl100} alt="artwork" />
+        <TrackName>Track Name : {song.trackName}</TrackName>
+        <Price>
+          Price : {song.trackPrice} {song.currency}
+        </Price>
         <div>
-            <h4>{song.artistName}</h4>
-            <div><img src={song.artworkUrl100} alt='artwork' /></div>
-            <div>Track Name : {song.trackName}</div>
-            <div>Price : {song.trackPrice} {song.currency}</div>
-            <div>
-               <Link to='/preview' state={song}><button className='btn btn-sm btn-primary'>Song Preview</button></Link>
-            </div>
+          <Link to="/preview" state={song}>
+            <button className="btn btn-sm btn-primary">Song Preview</button>
+          </Link>
         </div>
+      </Conteiner>
     </div>
-  )
-}
+  );
+};

@@ -40,6 +40,8 @@ export const FormSearch = (props) => {
             <input type="number" min={1} max={50} value={limit} onChange={(e) => setLimit(e.target.value)} />
 
             <input type="submit" value="Search" className='btn btn-primary mx-2' />
+
+            
         </form>
     </div>
   )

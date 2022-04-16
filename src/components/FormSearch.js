@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import styled from "styled-components";
 
 export const FormSearch = (props) => {
   const [term, setTerm] = useState("");
